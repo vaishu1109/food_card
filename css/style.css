@@ -6,13 +6,18 @@
       body{
         background-color: whitesmoke
       }
+      .title{
+        text-align: center;
+      }
+      .menu{
+        display: flex;
+        justify-content: center;
+      }
       .all-img {
-        display: inline-block;
-        height: 600px;
         width: 250px;
         border: solid 2px black;
         box-shadow: 5px 5px 10px 2px black;
-        margin:30px 0 0 100px ;
+        margin: 30px;
         background-color: antiquewhite;
         border-radius: 10px;
       }
@@ -24,10 +29,29 @@
       .description {
         padding: 10px 20px;
       }
+      .quntity{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 5px;
+        font-size: 20px;
+      }
+      .quntity button{
+        padding: 3px 8px;
+        margin: 5px;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        box-shadow: 0 0 5px 0.2px white;
+        cursor: pointer;
+      }
       .buy{
         padding: 10px 30px;
-        margin-top: 50px;
+        margin-top: 20px;
         margin-left: 40px;
+        margin-bottom: 20px;
         color: white;
         border: 2px solid black;
         background-color: black;

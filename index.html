@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+    <h1 class="title">Product Card....</h1>
     <div class="menu">
       <div class="burger all-img">
         <img src="./img/burger.png" alt="" class="images" />
@@ -19,36 +20,37 @@
           </p>
           <h1 class="price">Price</h1>
          <span> ₹ 289 <del>349</del> 5% off</span>
-          <button class="buy"><b>Buy Now </b></button>
+          <div class="quntity">
+            <button onclick="inc()">+</button><span id="quantity-text" style="color: black;"> 1 </span><button onclick="dec()">-</button>
+          </div>
+         <button class="buy"><b>Buy Now </b></button>
         </div>
       </div>
-      <div class="chicken all-img">
-        <img src="./img/biryani.png" alt="" class="images" />
-        <div class="description">
-          <h1>Chicken</h1>
-          <p>
-            Southern Fried Chicken is classic comfort food that comes out
-            perfectly every time! This chicken is crispy on the outside, juicy,
-            and tender on the inside.
-          </p>
-          <h1 class="price">Price</h1>
-          <span>₹ 299 <del>400</del> 5% off</span>
-          <button class="buy"><b>Buy Now </b></button>
-        </div>
-      </div>
-      <div class="chicken all-img">
-        <img src="./img/pizza (2).jpg" alt="" class="images" />
-        <div class="description">
-          <h1>Pizza</h1>
-          <p>
-            Yearning for a cheesy delight? Then we have an easy cheese pizza
-          recipe to add soul to your weekend binging!Weekend calls for some fun.
-          </p>
-          <h1 class="price">Price</h1>
-        <span>₹ 299 <del>399</del> 4% off</span>
-        <button class="buy"><b>Buy Now </b></button>
-        </div>
-      </div>
+      
     </div>
+
+    <script>
+      function inc(){
+        const quantity=document.getElementById("quantity-text");
+        let num= parseInt(quantity.innerText);
+        if(num>0 && num<10){
+          quantity.innerText=++num;
+        }
+        else{
+          alert("You Can not get more than 10 items....")
+        }
+        
+      }
+      function dec(){
+        const quantity=document.getElementById("quantity-text");
+        let num= parseInt(quantity.innerText);
+        if(num>1 && num<11){
+          quantity.innerText=--num;
+        }
+        else{
+          alert("Sorry You have to select at least one item..")
+        }
+      }
+    </script>
   </body>
 </html>
