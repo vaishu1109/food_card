@@ -48,12 +48,16 @@
       }
       function dec() {
         const quantity = document.getElementById("quantity-text");
+        const quntityPrice= document.getElementById("quntity-price");
+        const totalQuantity= document.getElementById("total-quantity");
         let num = parseInt(quantity.innerText);
         if (num > 1 && num < 11) {
           quantity.innerText = --num;
         } else {
           alert("Sorry You have to select at least one item..");
         }
+        quntityPrice.innerText=`${num} x 289`;
+        totalQuantity.innerText=`Total : ${num * 289}`;
       }
     </script>
   </body>
