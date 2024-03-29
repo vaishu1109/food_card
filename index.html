@@ -4,51 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <h1 class="title">Product Card....</h1>
     <div class="menu">
       <div class="burger all-img">
-        <img src="./img/burger.png" alt="" class="images" />
+        <img src="./img/ear_buds.jpg" alt="" class="images" />
         <div class="description">
-          <h1>Burger</h1>
+          <h1 class="product-title">Apple AirPods</h1>
           <p>
-            Skip the mess of pan frying burgers and bake them instead! I'll show
-            you how to cook burgers in the oven for the perfect burger, every
-            time.
+            Apple AirPods 3 Earbuds PNG Images & PSDs for Download | PixelSquid 
           </p>
           <h1 class="price">Price</h1>
-         <span> ₹ 289 <del>349</del> 5% off</span>
-          <div class="quntity">
-            <button onclick="inc()">+</button><span id="quantity-text" style="color: black;"> 1 </span><button onclick="dec()">-</button>
+          <span> ₹ 289 </span>
+          <div>
+            <p class="price" id="quntity-price">1 x 289</p>
+            <p class="price" id="total-quantity">Total : 289</p>
           </div>
-         <button class="buy"><b>Buy Now </b></button>
+          <div class="quntity">
+            <button onclick="inc()">+</button
+            ><span id="quantity-text" style="color: black"> 1 </span
+            ><button onclick="dec()">-</button>
+          </div>
+          <button class="buy"><b>Buy Now </b></button>
         </div>
       </div>
-      
     </div>
 
     <script>
-      function inc(){
-        const quantity=document.getElementById("quantity-text");
-        let num= parseInt(quantity.innerText);
-        if(num>0 && num<10){
-          quantity.innerText=++num;
+      function inc() {
+        const quantity = document.getElementById("quantity-text");
+        const quntityPrice= document.getElementById("quntity-price");
+        const totalQuantity= document.getElementById("total-quantity");
+        let num = parseInt(quantity.innerText);
+        if (num > 0 && num < 10) {
+          quantity.innerText = ++num;
+        } else {
+          alert("You Can not get more than 10 items....");
         }
-        else{
-          alert("You Can not get more than 10 items....")
-        }
-        
+        quntityPrice.innerText=`${num} x 289`;
+        totalQuantity.innerText=`Total : ${num * 289}`;
       }
-      function dec(){
-        const quantity=document.getElementById("quantity-text");
-        let num= parseInt(quantity.innerText);
-        if(num>1 && num<11){
-          quantity.innerText=--num;
-        }
-        else{
-          alert("Sorry You have to select at least one item..")
+      function dec() {
+        const quantity = document.getElementById("quantity-text");
+        let num = parseInt(quantity.innerText);
+        if (num > 1 && num < 11) {
+          quantity.innerText = --num;
+        } else {
+          alert("Sorry You have to select at least one item..");
         }
       }
     </script>

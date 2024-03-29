@@ -14,12 +14,15 @@
         justify-content: center;
       }
       .all-img {
-        width: 250px;
+        width: 280px;
         border: solid 2px black;
-        box-shadow: 5px 5px 10px 2px black;
+        box-shadow: 1px 1px 10px 0.2px black;
         margin: 30px;
-        background-color: antiquewhite;
+        background-color: white;
         border-radius: 10px;
+      }
+      .product-title{
+        padding-bottom: 10px;
       }
       .images {
         width: 100%;
@@ -68,12 +71,16 @@
       }
       h1{
         font-size: 25px;
-        margin-top: 20px;
+        margin-top: 10px;
       }
-     del{
-      color: black;
-     }
+     
      span{
-      color: blue;
+      color: rgb(71, 70, 70);
+      font-size: 20px;
+      padding: 5px;
      }
+     .price{
+      padding-top: 10px;
+      font-size: 20px;
     
+     }
